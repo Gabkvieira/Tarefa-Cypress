@@ -10,7 +10,7 @@ describe('Testes agenda de contatos', () => {
         cy.get('[type="email"]').type('teste@teste.com')
         cy.get('[type="tel"]').type('(41) 12345-6789')
         cy.get('.adicionar').click()
-        cy.screenshot('tela-agenda-contato-adicionado')
+        cy.screenshot('tela-contato-adicionado')
     })
     it('Deve alterar um contato', () => {
         cy.get(':nth-child(2) > .sc-gueYoa > .edit').click()
@@ -21,11 +21,11 @@ describe('Testes agenda de contatos', () => {
         cy.get('[type="tel"]').clear()
         cy.get('[type="tel"]').type('telefone alterado')
         cy.get('.alterar').click()
-        cy.screenshot('tela-agenda-contato-alterado')
+        cy.screenshot('tela-contato-alterado')
     })
     it('Deve remover um contato', () => {
         cy.get(':nth-child(2) > .sc-gueYoa > .delete').click()
-        cy.screenshot('tela-agenda-contato-removido')
+        cy.screenshot('tela-contato-removido')
     })
 
 })

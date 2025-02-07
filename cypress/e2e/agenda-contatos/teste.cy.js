@@ -13,7 +13,7 @@ describe('Testes agenda de contatos', () => {
         cy.screenshot('tela-contato-adicionado')
     })
     it('Deve alterar um contato', () => {
-        cy.get(':nth-child(2) > .sc-gueYoa > .edit').click()
+        cy.get('.edit').first().click()
         cy.get('[type="text"]').clear()
         cy.get('[type="text"]').type('contato alterado')
         cy.get('[type="email"]').clear()
@@ -24,7 +24,7 @@ describe('Testes agenda de contatos', () => {
         cy.screenshot('tela-contato-alterado')
     })
     it('Deve remover um contato', () => {
-        cy.get(':nth-child(2) > .sc-gueYoa > .delete').click()
+        cy.get('.delete').first().click()
         cy.screenshot('tela-contato-removido')
     })
 
